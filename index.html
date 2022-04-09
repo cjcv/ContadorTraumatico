@@ -25,48 +25,64 @@
             -webkit-appearance:none;
             align-content: center;
         }
-    
+        header {
+            padding-top: 10vh;
+        }
         h1, h2, h3 {
             margin: 0;
         }
         h1 {
             color: #77dd77;
-            font-size: 8vw;
+            font-size: 8vh;
         }
         h2 {
             color: #ff6961;
-            font-size: 5vw;
+            font-size: 5vh;
         }
         h3 {
             color: #ff6961;
-            font-size: 4vw;
+            font-size: 4vh;
         }
     
         div {
             background-color: #fdcae1;
-            border: #fdcae1 1vw solid;
-            border-radius: 1vw;
-            width: 40vw;
+            border: #fdcae1 0.5vh solid;
+            border-radius: 1vh;
+            width: 40vh;
             width: fit-content;
         }
 
         p {
+            display: onblock;
             color: #fdfd96;
             font-size: larger;
             display: inline-block;
             background-color: #84b6f4;
             border: black, 6px, solid;
-            border-radius: 0.5vw;
+            border-radius: 0.5vh;
             text-align: center;
-            padding: 10px;
-            font-size: 8vw;
-            margin: 0.5vw;
+            padding: 1vh;
+            font-size: 6vh;
+            margin: 0.5vh;
+            min-width: 8vh;
         }
 
-        img {
-            width: 100%;
-            height: auto;
-            
+        a {
+            font-size: 40vh;
+            display: block;
+        }
+
+        button {
+            border: #ff6961 0.5vh solid;
+            border-radius: 30%;
+            margin: 4%;
+            padding: 5%;
+            font-size: 6vh;
+            color: #fdfd96;
+            min-width: 15vh;
+        }
+        button:hover {
+            background-color: #ff6961;
         }
     </style>
 </head>
@@ -88,7 +104,7 @@
 </body>
 
 <script>
-    const DiaD = new Date('07/13/2022 14:20');
+    const DiaD = new Date('04/10/2022 0:45:30');//('07/13/2022 14:20');//
     const milisegundos_minuto = 1000 * 60;
     const milisegundos_hora = 1000 * 60 * 60;
     const milisegundos_dia = 1000 * 60 * 60 * 24;
@@ -115,9 +131,19 @@
             no.textContent = 'NO';
             no.onclick = function() {
                 document.body.innerHTML = null;
-                var imagen = document.createElement('img');
-                imagen.src = "";
-                document.innerHTML = imagen;
+
+                var texto = document.createElement('p');
+                texto.textContent = "¡MATAR!";
+                document.body.appendChild(texto);
+
+                var emoji = document.createElement('a');
+                emoji.textContent = "🗡️";
+                document.innerHTML = emoji;
+                document.body.append(texto);
+                document.body.append(emoji);
+
+                var duTexto = texto.cloneNode(true);
+                document.body.append(duTexto);
             }
             
             var si = document.createElement('button');
@@ -125,9 +151,17 @@
             si.textContent = 'SI';
             si.onclick = function() {
                 document.body.innerHTML = null;
-                var imagen = document.createElement('img');
-                imagen.src = "like.png";
-                document.body.appendChild(imagen);
+                var texto = document.createElement('p');
+                texto.textContent = "FELICITAR POR GRANDIOSA OBRA DE ARTE";
+                document.body.appendChild(texto);
+                
+                var emoji = document.createElement('a');
+                emoji.textContent = "👍🏼";
+                document.body.appendChild(emoji);
+
+                var texto = document.createElement('p');
+                texto.textContent = "DAR UN ABRAZO";
+                document.body.appendChild(texto);
             }
 
             document.body.innerHTML = null;
