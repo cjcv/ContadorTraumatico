@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Oswald:wght@600&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="logo.png">
-    <title>Mi Poema</title>
+    <link rel="shortcut icon" href="favicon.png" type="favicon.png">
+    <title>Tiempo Para El Poema</title>
 
     <style>
         * {
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
     
             background-color: transparent;
             text-align: center;
@@ -31,37 +31,40 @@
         }
         h1 {
             color: #77dd77;
+            font-size: 8vw;
         }
         h2 {
             color: #ff6961;
+            font-size: 5vw;
         }
-        
         h3 {
             color: #ff6961;
+            font-size: 4vw;
         }
     
         div {
-            align-items: center;
             background-color: #fdcae1;
-            border: #fdcae1 5px solid;
-            border-radius: 5%;
+            border: #fdcae1 1vw solid;
+            border-radius: 1vw;
             width: 40vw;
             width: fit-content;
-            align-content: center;
-            margin: 0 auto;
         }
+
         p {
             color: #fdfd96;
             font-size: larger;
             display: inline-block;
             background-color: #84b6f4;
             border: black, 6px, solid;
-            border-radius: 4%;
+            border-radius: 0.5vw;
             text-align: center;
             padding: 10px;
+            font-size: 8vw;
+            margin: 0.5vw;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h2>TIEMPO PARA</h2>
@@ -77,6 +80,7 @@
         <p class="sitio" id="4"></p>
     </div>
 </body>
+
 <script>
     const DiaD = new Date('07/13/2022 14:20');
     const milisegundos_minuto = 1000 * 60;
