@@ -62,6 +62,12 @@
             font-size: 8vw;
             margin: 0.5vw;
         }
+
+        img {
+            width: 100%;
+            height: auto;
+            
+        }
     </style>
 </head>
 
@@ -99,6 +105,37 @@
         document.getElementById("2").textContent = horas_faltantes < 10 ? "0" + horas_faltantes : horas_faltantes;
         document.getElementById("3").textContent = minutos_faltantes < 10 ? "0" + minutos_faltantes : minutos_faltantes;
         document.getElementById("4").textContent = segundos_faltantes < 10 ? "0" + segundos_faltantes : segundos_faltantes;
+    
+        if(tiempo <= 0){
+            var pregunta = document.createElement('p');
+            pregunta.textContent = '¿LA PROMESA A SIDO CUMPLIDA?';
+
+            var no = document.createElement('button');
+            no.type = 'button';
+            no.textContent = 'NO';
+            no.onclick = function() {
+                document.body.innerHTML = null;
+                var imagen = document.createElement('img');
+                imagen.src = "";
+                document.innerHTML = imagen;
+            }
+            
+            var si = document.createElement('button');
+            si.type = 'button';
+            si.textContent = 'SI';
+            si.onclick = function() {
+                document.body.innerHTML = null;
+                var imagen = document.createElement('img');
+                imagen.src = "like.png";
+                document.body.appendChild(imagen);
+            }
+
+            document.body.innerHTML = null;
+            document.body.style = "background-color: #84b6f4;"
+            document.body.appendChild(pregunta);
+            document.body.appendChild(no);
+            document.body.appendChild(si);
+        }
     }
 
     update();
