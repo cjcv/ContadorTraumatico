@@ -8,9 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Oswald:wght@600&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Mi Poema</title>
 
-
-    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+    
+            background-color: transparent;
+            text-align: center;
+            font-family: 'Beau Rivage', cursive;
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Zen Kurenaido', sans-serif;
+    
+            -webkit-appearance:none;
+            align-content: center;
+        }
+    
+        h1, h2, h3 {
+            margin: 0;
+        }
+        h1 {
+            color: #77dd77;
+        }
+        h2 {
+            color: #ff6961;
+        }
+        
+        h3 {
+            color: #ff6961;
+        }
+    
+        div {
+            align-items: center;
+            background-color: #fdcae1;
+            border: #fdcae1 5px solid;
+            border-radius: 5%;
+            width: 40vw;
+            width: fit-content;
+            align-content: center;
+            margin: 0 auto;
+        }
+        p {
+            color: #fdfd96;
+            font-size: larger;
+            display: inline-block;
+            background-color: #84b6f4;
+            border: black, 6px, solid;
+            border-radius: 4%;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,7 +68,6 @@
         <h1>EL ANSIADO POEMA</h1>
         <h3>y fin de curso :)</h3>
     </header>
-    <br>
     <br>
     <br>
     <div>
@@ -42,43 +91,13 @@
         var minutos_faltantes = Math.floor((tiempo % milisegundos_hora) / milisegundos_minuto);
         var segundos_faltantes = Math.floor((tiempo % milisegundos_minuto) / 1000);
 
-        document.getElementById("1").textContent = dias_faltantes;
-        document.getElementById("2").textContent = horas_faltantes;
-        document.getElementById("3").textContent = minutos_faltantes;
-        document.getElementById("4").textContent = segundos_faltantes;
+        document.getElementById("1").textContent = dias_faltantes < 10 ? "0" + dias_faltantes : dias_faltantes;
+        document.getElementById("2").textContent = horas_faltantes < 10 ? "0" + horas_faltantes : horas_faltantes;
+        document.getElementById("3").textContent = minutos_faltantes < 10 ? "0" + minutos_faltantes : minutos_faltantes;
+        document.getElementById("4").textContent = segundos_faltantes < 10 ? "0" + segundos_faltantes : segundos_faltantes;
     }
 
     update();
     setInterval(update, 1000);
 </script>
-
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-
-        background-color: transparent;
-        text-align: center;
-        font-family: 'Beau Rivage', cursive;
-        font-family: 'Oswald', sans-serif;
-        font-family: 'Zen Kurenaido', sans-serif;
-
-        -webkit-appearance:none;
-    }
-    h1, h2, h3 {
-        margin: 0;
-    }
-    div {
-        align-items: center;
-        border: red 5px solid;
-        border-radius: 5%;
-        width: 40vw;
-    }
-    p {
-        display: inline-block;
-        background-color: rgb(131, 215, 218);
-        border: black, 6px, solid;
-        border-radius: 4%;
-    }
-</style>
 </html>
