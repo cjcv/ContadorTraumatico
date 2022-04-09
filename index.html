@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Oswald:wght@600&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2>TIEMPO PARA</h2>
+        <h1>EL ANSIADO POEMA</h1>
+        <h3>y fin de curso :)</h3>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div>
+        <p class="sitio" id="1"></p>
+        <p class="sitio" id="2"></p>
+        <p class="sitio" id="3"></p>
+        <p class="sitio" id="4"></p>
+    </div>
+</body>
+<script>
+    const DiaD = new Date('07/13/2022 14:20');
+    const milisegundos_minuto = 1000 * 60;
+    const milisegundos_hora = 1000 * 60 * 60;
+    const milisegundos_dia = 1000 * 60 * 60 * 24;
+
+    function update() {
+        var Ahora = new Date();
+        var tiempo = DiaD - Ahora;
+        var dias_faltantes = Math.floor(tiempo / milisegundos_dia);
+        var horas_faltantes = Math.floor((tiempo % milisegundos_dia) / milisegundos_hora);
+        var minutos_faltantes = Math.floor((tiempo % milisegundos_hora) / milisegundos_minuto);
+        var segundos_faltantes = Math.floor((tiempo % milisegundos_minuto) / 1000);
+
+        document.getElementById("1").textContent = dias_faltantes;
+        document.getElementById("2").textContent = horas_faltantes;
+        document.getElementById("3").textContent = minutos_faltantes;
+        document.getElementById("4").textContent = segundos_faltantes;
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+
+        background-color: transparent;
+        text-align: center;
+        font-family: 'Beau Rivage', cursive;
+        font-family: 'Oswald', sans-serif;
+        font-family: 'Zen Kurenaido', sans-serif;
+
+        -webkit-appearance:none;
+    }
+    h1, h2, h3 {
+        margin: 0;
+    }
+    div {
+        align-items: center;
+        border: red 5px solid;
+        border-radius: 5%;
+        width: 40vw;
+    }
+    p {
+        display: inline-block;
+        background-color: rgb(131, 215, 218);
+        border: black, 6px, solid;
+        border-radius: 4%;
+    }
+</style>
+</html>
