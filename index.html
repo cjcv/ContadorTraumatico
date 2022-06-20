@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Oswald:wght@600&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.png" type="favicon.png">
-    <title>Tiempo Para El Poema</title>
+    <title>Tiempo Para 2º De Bachiller ☹️</title>
 
     <style>
         * {
@@ -104,7 +104,7 @@
 </body>
 
 <script>
-    const DiaD = new Date('06/1/2022 14:20');
+    const DiaD = new Date('09/08/2022 14:20');
     const milisegundos_minuto = 1000 * 60;
     const milisegundos_hora = 1000 * 60 * 60;
     const milisegundos_dia = 1000 * 60 * 60 * 24;
@@ -124,51 +124,7 @@
     
         if(tiempo <= 0){
             var pregunta = document.createElement('p');
-            pregunta.textContent = '¿LA PROMESA A SIDO CUMPLIDA?';
-
-            var no = document.createElement('button');
-            no.type = 'button';
-            no.textContent = 'NO';
-            no.onclick = function() {
-                document.body.innerHTML = null;
-
-                var texto = document.createElement('p');
-                texto.textContent = "¡MATAR!";
-                document.body.appendChild(texto);
-
-                var emoji = document.createElement('a');
-                emoji.textContent = "🗡️";
-                document.innerHTML = emoji;
-                document.body.append(texto);
-                document.body.append(emoji);
-
-                var duTexto = texto.cloneNode(true);
-                document.body.append(duTexto);
-            }
-            
-            var si = document.createElement('button');
-            si.type = 'button';
-            si.textContent = 'SI';
-            si.onclick = function() {
-                document.body.innerHTML = null;
-                var texto = document.createElement('p');
-                texto.textContent = "FELICITAR POR GRANDIOSA OBRA DE ARTE";
-                document.body.appendChild(texto);
-                
-                var emoji = document.createElement('a');
-                emoji.textContent = "👍🏼";
-                document.body.appendChild(emoji);
-
-                var texto = document.createElement('p');
-                texto.textContent = "DAR UN ABRAZO";
-                document.body.appendChild(texto);
-            }
-
-            document.body.innerHTML = null;
-            document.body.style = "background-color: #84b6f4;"
-            document.body.appendChild(pregunta);
-            document.body.appendChild(no);
-            document.body.appendChild(si);
+            pregunta.textContent = 'EN FIN... A LLORAR A LA LLORERÍA';
         }
     }
 
